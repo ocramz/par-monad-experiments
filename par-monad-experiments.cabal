@@ -1,6 +1,6 @@
 name:                par-monad-experiments
 version:             0.1.0.0
-synopsis:            TODO Initial project template from stack
+synopsis:            Experiments with monad-par
 description:         Please see README.md
 homepage:            https://github.com/ocramz/par-monad-experiments
 license:             BSD3
@@ -12,7 +12,7 @@ category:            Acme
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
-tested-with:         GHC == 7.10.2
+tested-with:         GHC == 8.0.1
 
 library
   default-language:    Haskell2010
@@ -20,6 +20,7 @@ library
   hs-source-dirs:      src
   exposed-modules:     Lib
   build-depends:       base >= 4.7 && < 5
+                     , monad-par
 
 executable par-monad-experiments
   default-language:    Haskell2010
@@ -27,6 +28,7 @@ executable par-monad-experiments
   hs-source-dirs:      app
   main-is:             Main.hs
   build-depends:       base
+                     , monad-par
                      , par-monad-experiments
 
 test-suite spec
@@ -35,10 +37,12 @@ test-suite spec
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
+  other-modules:       LibSpec
   build-depends:       base
+                     , monad-par
                      , par-monad-experiments
                      , hspec
-                     , QuickCheck
+                     -- , QuickCheck
 
 source-repository head
   type:     git
