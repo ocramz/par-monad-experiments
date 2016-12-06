@@ -2,4 +2,4 @@
 
 [![Build Status](https://travis-ci.org/ocramz/par-monad-experiments.png)](https://travis-ci.org/ocramz/par-monad-experiments)
 
-TODO Description.
+Experimenting with dataflow parallelism, as provided by the `monad-par` Haskell library
